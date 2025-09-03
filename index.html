@@ -142,7 +142,7 @@
         <div class="stat"><div class="big" id="sTempo">—</div><small>Tempo</small></div>
       </div>
 
-      <div class="footer">Dicas: <b>Enter</b> verifica · <b>Espaço</b> pula · Coloque as imagens <code>professora-fechada.png</code>, <code>professora-aberta.png</code> e <code>cenario.jpg</code> na mesma pasta.</div>
+      <div class="footer">Dicas: <b>Enter</b> verifica · <b>Espaço</b> pula </div>
     </div>
   </div>
 
@@ -196,12 +196,12 @@
         state.acertos++; state.sequencia++;
         el.sAcertos.textContent = state.acertos; el.sSequencia.textContent = state.sequencia;
         setFeedback(`✔ Boa! ${state.a} × ${state.b} = ${certo}.`, 'ok');
-        if(state.vozAtiva) falar(`Acertou! ${state.a} vezes ${state.b} é ${certo}.`);
+        if(state.vozAtiva) falar(`Acertou..! ${state.a} vezes ${state.b} é ${certo}.`);
         setTimeout(novaPergunta, 500);
       } else {
         state.sequencia = 0; el.sSequencia.textContent = 0;
         setFeedback(`✖ Ops! Tente novamente…`, 'bad');
-        if(state.vozAtiva) falar(`Ops! Tenta de novo.`);
+        if(state.vozAtiva) falar(`Opsss, Tente novamente...`);
         el.resposta.select();
       }
     }
